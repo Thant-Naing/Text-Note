@@ -1,0 +1,19 @@
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+
+npx json-server -w ./src/db/db.json --port 8000
+
+
+expo cli
+
+npm i expo-cli .............1
+npx expo init {name} ..........2
+npx create-expo-app name
+npx expo init HelloNative
+cd HelloNative
+npx expo start
+
+eas build --platform android
+
+
+tailwild expo
+npx tailwindcss -o ./styles/tailwind.css

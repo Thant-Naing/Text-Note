@@ -1,0 +1,15 @@
+
+thetn3577@
+Y9ujp8py
+
+Control panel username:	b13_37155247
+Control panel password:	**********
+Control panel URL:	cpanel.byethost13.com
+MySQL username	b13_37155247
+MySQL password:	**********
+MySQL hostname:	sql110.byethost13.com
+FTP username:	b13_37155247
+FTP password:	**********
+FTP host name:	ftp.byethost13.com
+Your Website URL:	http://sankyitar-12.byethost13.com
+ 	 

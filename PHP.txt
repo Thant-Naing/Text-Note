@@ -1,0 +1,35 @@
+create table -->   php artisan make:migration create_Blogs_table 
+create model -->   php artisan make:model Blog
+update table but all dele data -->  php artisan migrate:fresh 
+
+all dele data and recreate data --> php artisan migrate:fresh --seed
+
+***create table,model and factory,controller same time --> php artisan make:model Category -mfc
+create factory --> php artisan make:factory BlogFactory
+createmail -->php artisan make:mail SubscriberMail
+
+create user  --> php artisan db:seed
+create controller --> php artisan make:controller BlogController
+
+add new row  to users table without dele data
+ -->  php artisan make:migration add_avatar_colum_to_users_table
+
+make vendor publish -->  php artisan vendor:publish
+linking public file --> php artisan storage:link
+
+for test --> php artisan tinker
+for get data --> Bl0g::find(id)
+back to     -->  php artisan migrate:rollback 
+
+MySQL cli  patch C:\xampp\mysql\bin>
+mysql -u root
+
+
+
+
+php and Laravel install
+
+xammp and composer first install 
+
+path ->C:\xampp\htdocs> 
+composer create-project laravel/laravel laravel-demo

@@ -1,0 +1,17 @@
+ export const API_ENDPOINT ="https://contact.sankyitar.store/api/v1"
+  
+
+ const Api = axios.create({
+    baseURL : API_ENDPOINT
+
+ });
+
+try {
+   
+     const res = await Api.post("/register",data)
+     return res
+    }
+    catch (e) {
+      throw new Error(e.message)
+    }
+  
