@@ -20,3 +20,11 @@
     }
   }
 }
+
+
+eas build:configure
+eas build --platform android
+npx expo install --check
+ npm cache clean --force
+expo install --fix
+npx -y expo-doctor

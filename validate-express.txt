@@ -1,0 +1,39 @@
+const express = require('express');
+const { body, validationResult } = require('express-validator');
+const app = express();
+const port = 3000;
+
+// Middleware to parse JSON requests
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// POST route with validation
+app.post(
+  '/submit-data',
+  // Validation middleware
+  [
+    body('name')
+      .notEmpty().withMessage('Name is required')
+      .isLength({ min: 3 }).withMessage('Name must be at least 3 characters long'),
+    body('email')
+      .isEmail().withMessage('Please provide a valid email'),
+    body('age')
+      .optional() // The age field is optional
+      .isInt({ min: 1 }).withMessage('Age must be a positive integer'),
+  ],
+  (req, res) => {
+    // Find validation errors in this request and wrap them in an object
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    // If no errors, process the data
+    const { name, email, age } = req.body;
+    res.send(`Data received: Name - ${name}, Email - ${email}, Age - ${age || 'N/A'}`);
+  }
+);
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});

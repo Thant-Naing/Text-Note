@@ -1,5 +1,42 @@
- npm install prisma 
+ express.js
+npm i express cors
+npm i nodemon
+npm i http-server
+npx nodemon index.js
+npm install @faker-js/faker      //fake data
+import { faker } from '@faker-js/faker';
 
-npx prisma init --datasource-provider sqlite
 
-npx prisma migrate dev --name=init
+  prisma orm
+npm install prisma 
+npx prisma init --datasource-provider SQLite    //create table
+
+npx prisma migrate dev --name init    //migrate
+npx prisma migrate reset          //migrate reset all data delete
+
+npm i bcrypt
+npm i jsonwebtoken
+npm install dotenv
+require('dotenv').config();
+npm install multer  //for upload photo
+
+
+
+your-project/
+├── node_modules/
+├── src/
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   └── contentController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── contentRoutes.js
+│   ├── utils/
+│   │   ├── tokenBlacklist.js
+│   │   └── prisma.js
+│   └── app.js
+├── .env
+├── package.json
+└── README.md

@@ -1,0 +1,7 @@
+npm install create-expo-app         //install create-expo-app
+npx create-expo-app@latest 
+npx create-expo-app native       //create react-native project
+npm run reset-project         // reset all file 
+npx expo start --clear
+npx react-native start --reset-cache
+
