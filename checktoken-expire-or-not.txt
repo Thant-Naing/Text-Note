@@ -1,0 +1,25 @@
+const isTokenExpired =(token) => {
+  try {
+    const decoded = jwt.decode(token);
+    const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds
+    return decoded.exp < currentTime;
+  } catch (err) {
+    console.error('Invalid token');
+    return true; // Treat invalid tokens as expired
+  }
+}
+
+
+
+
+change time stance ..................
+
+
+const whenExpire = (timestamp) => {
+    const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+    const formattedDate = date.toLocaleString("en-US", {
+      timeZone: "Asia/Yangon",
+    });
+
+    return formattedDate;
+  };

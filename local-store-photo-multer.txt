@@ -1,0 +1,24 @@
+const express = require('express');
+const multer = require('multer');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+const app = express();
+const upload = multer({ dest: 'uploads/' });
+app.use('/uploads', express.static('uploads'));
+
+app.post('/upload', upload.single('photo'), async (req, res) => {
+  const { file } = req;
+  const photo = await prisma.photo.create({
+    data: {
+      url: `/uploads/${file.filename}`
+    }
+  });
+  res.json(photo);
+});
+
+app.get('/photos', async (req, res) => {
+  const photos = await prisma.photo.findMany();
+  res.send(`<div>${photos.map(p => `<img width="200" height="200" src="${p.url}" />`).join('')}</div>`);
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));

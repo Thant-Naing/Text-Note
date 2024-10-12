@@ -1,0 +1,3 @@
+const timestamp = isExpired.exp;
+const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+const whenExpires = date.toLocaleString('en-US', { timeZone: 'Asia/Yangon' });

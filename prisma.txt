@@ -1,4 +1,5 @@
  express.js
+npm install jsonwebtoken
 npm i express cors
 npm i nodemon
 npm i http-server
@@ -9,6 +10,8 @@ import { faker } from '@faker-js/faker';
 
   prisma orm
 npm install prisma 
+
+"postgresql", "mysql", "sqlite", "sqlserver", "mongodb" or "cockroachdb".
 npx prisma init --datasource-provider SQLite    //create table
 
 npx prisma migrate dev --name init    //migrate
@@ -19,7 +22,7 @@ npm i jsonwebtoken
 npm install dotenv
 require('dotenv').config();
 npm install multer  //for upload photo
-
+ npm i socket.io   //websocket
 
 
 your-project/

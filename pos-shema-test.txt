@@ -1,0 +1,99 @@
+
+    activity_log 
+    id	log_name	description	subject_type	event	subject_id	causer_type	causer_id	properties	batch_uuid	created_at	updated_at		 		
+    addons
+    id	addon_category_id	name	price	is_active	created_at	updated_at		 		
+    addon_categories
+    id	name	type	available_quantity	description	created_at	updated_at	 		
+    addon_category_item
+    id	addon_category_id	item_id	created_at	updated_at		 	
+    addon_item
+    id	set_item_id	item_id	addon_id	created_at	updated_at		 		
+    addon_recipe
+    id	created_at	updated_at	addon_id	recipe_id		 	
+    attachments
+    id	user_id	file	created_at	updated_at	
+	 	
+    bookings
+    id	customer_id	table_id	start_time	end_time	auto_reserve_time
+Change Table Status minutes before end time	note	total_seat	status	created_at	updated_at		 		
+    categories
+    id	name	is_active	created_at	updated_at
+    	 		
+    company_settings
+    id	image	code	name	address	phone	created_at	updated_at	 		
+    customers
+    id	name	phone	address	point	type	created_at	updated_at	credit	credit_limit	
+	 		
+   	
+    discounts
+    id	code	name	description	start_date	end_date	type	discount_type	amount
+discount_type ပေါ်မူတည်ပြီး per and fix ဖြစ်မယ်	count	max_count	min_subtotal	max_discount	is_active	created_at	updated_at	
+ 	 		
+    discount_invoice	
+   id	discount_id	invoice_id	created_at	updated_at	
+   		
+    discount_item
+    id	discount_id	item_id	created_at	updated_at		 	
+    events
+    id	name	description	discount_type	start_time	end_time	week_days	price	is_active	created_at	updated_at	
+	 		
+    expenses
+    id	name	description	discount_type	start_time	end_time	week_days	price	is_active	created_at	updated_at	 		
+    failed_jobs
+    id	uuid	connection	queue	payload	exception	failed_at		 	
+    floors
+    id	code	image	name	is_active	created_at	updated_at		 		
+     		
+    		
+    item_categories
+   id	main_category_id	code	name	order	is_active	is_combo	created_at	updated_at	 		
+    item_set_item
+    id	item_id	set_item_id	quantity	created_at	updated_at		 	
+    kitchens	 	
+    languages	 		
+    main_categories	 		
+    management	 	
+    migrations	 	
+    model_has_permissions	 	
+    model_has_roles	 	
+    notes	 			
+    notice_boards	 		
+    oauth_access_tokens	 		
+    oauth_auth_codes	 		
+    oauth_clients	 	
+    oauth_personal_access_clients	 	
+    oauth_refresh_tokens	 	
+    orders	 		
+    order_items	 	
+    order_item_addons	 	
+    order_set_items	 	
+    order_statuses	
+    other__expenses	 		
+    password_resets	 	
+    payments	 		
+    payrolls	 	
+    permissions	 	
+    personal_access_tokens	 	
+    point_histories	 	
+    point_redeems	 	
+    printers	 		
+    private_rooms	 		
+    promote_histories	 	
+    purchases	 	
+    purchase_orders	 		
+    purchase_returns	 		
+    recipes	 		
+    rentals	 		
+    resigns	 		
+    roles	 
+    role_has_permissions	 		
+    settings	 		
+    stock_outs	 		
+    suppliers	 	
+    supplier_categories	 		
+    supplier_supplier_category	 	
+    tables	 	
+    table_user	 		
+    transfer_histories	 		
+    users	 
